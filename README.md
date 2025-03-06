@@ -4,8 +4,19 @@
 Dieses Projekt automatisiert Tests für die Website [Practice Test Automation](https://practicetestautomation.com) mit Java, Selenium, dem Page Object Pattern und Cucumber. Die Tests simulieren typische User-Szenarien, einschließlich positiver und negativer Login-Tests.
 
 ##Projektstruktur
-$tests # Testklassen (JUnit/Cucumber) │  │  └──    stepdefinitions # Cucumber-Schrittdefinitionen └──    resources # Konfigurations- und Feature-Dateien
-
+practice-test-automation/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── pages/              # Page-Klassen (HomePage, LoginPage)
+│   │   │   └── utils/              # Hilfsklassen und Driver-Management
+│   └── test/
+│       ├── java/
+│       │   ├── tests/             # Testklassen
+│       │   └── runners/           # Cucumber Test Runner
+├── .gitignore
+├── pom.xml                       # Maven Konfigurationsdatei
+└── README.md                     # Diese Datei 
 
 ##Aktuelle Tests
 - **Login Test (positiv)**: Prüft, ob die Anmeldung mit gültigen Anmeldedaten erfolgreich ist.  
