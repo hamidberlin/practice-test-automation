@@ -11,14 +11,14 @@ import com.practicetestautomation.pages.HomePage;
 import com.practicetestautomation.pages.LoginPage;
 
 
-public class TestHomePage {
+public class TestPositiveLogin {
 	
 	private WebDriver driver;
 	
 	@Before
 	public void setUp() throws Exception {
 		System.out.println("Initialisiere Webdriver");
-		System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "/opt/homebrew/bin/geckodriver");
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("https://practicetestautomation.com/");
@@ -62,7 +62,7 @@ public class TestHomePage {
 	    // Assert: Überprüfe, ob der Login erfolgreich war
 	    // Nachdem wir den Login abgeschlossen haben, überprüfen wir, ob die Erfolgsmeldung den Text "Logged In Successfully" enthält.
 	    String statusMeldung = loginPage.statusMeldungAuslesen();
-	    assertTrue(statusMeldung.contains("Logged In Successfully"));
+	    assertTrue("Login sollte erfolgreich sein", statusMeldung.contains("Logged In Successfully"));
 
 	    // LogOut: Melde dich aus
 	    // Nach dem erfolgreichen Login klicken wir auf den "Log out"-Button, um den Logout-Vorgang zu starten.
