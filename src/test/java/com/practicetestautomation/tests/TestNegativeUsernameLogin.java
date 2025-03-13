@@ -44,7 +44,7 @@ public class TestNegativeUsernameLogin {
 	    loginPage.btnSubmitAnklicken();
 	    
 	    // Überprüfen der Fehlermeldung
-	    String invalidStatusMeldung = loginPage.invalidUsernameAuslesen();
+	    String invalidStatusMeldung = loginPage.invalidUsernameElement();
 	    assertEquals("Your username is invalid!", invalidStatusMeldung);
 	}
 }

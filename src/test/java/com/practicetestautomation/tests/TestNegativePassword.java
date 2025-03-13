@@ -43,7 +43,7 @@ public class TestNegativePassword {
 	    loginpage.zugangsdatenEingeben("student", "incorrectPassword");
 	    loginpage.btnSubmitAnklicken();
 	    
-	    String invalidPasswordMeldung = loginpage.invalidPasswordAuslesen();
+	    String invalidPasswordMeldung = loginpage.invalidPasswordElement();
 	    assertEquals("Your password is invalid!", invalidPasswordMeldung);   
 	    
 	    

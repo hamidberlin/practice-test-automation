@@ -78,12 +78,12 @@ public class LoginPage {
     }
 
     // Methode zum Auslesen der Fehlermeldung bei falschen Login-Daten
-    public String invalidUsernameAuslesen() {
+    public String invalidUsernameElement() {
         wait.until(ExpectedConditions.visibilityOf(invalidPassword));
         return invalidPassword.getText();
     }
     
-    public String invalidPasswordAuslesen() {
+    public String invalidPasswordElement() {
         wait.until(ExpectedConditions.visibilityOf(invalidUsername));
         return invalidUsername.getText();
     }
